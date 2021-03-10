@@ -4,6 +4,8 @@
 set -o pipefail
 # fail harder
 set -eu
+# do not treat empty globs as literal
+shopt -s nullglob
 
 bp_dir=$(
 	cd "$(dirname "$0")/.."
